@@ -1,0 +1,8 @@
+build:
+  commands:
+    - docker build -t nginx-sample .
+    - docker run -d -p 80:80 nginx-sample
+
+benchmark:
+  targets:
+    - http://localhost/
